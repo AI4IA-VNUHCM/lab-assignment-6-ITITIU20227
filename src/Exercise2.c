@@ -15,8 +15,9 @@ Ex:
 void Ex2(int n, char *str[]){
 	//Your codes here
 	char temp[100];
-	for(int i = 0; i < n; i++) {
-		for(int j = i+1; j < n; j++) {
+	int i, j, k;
+	for(i = 0; i < n; i++) {
+		for(j = i+1; j < n; j++) {
 			if(strcmp(str[i], str[j]) > 0) {
 				strcpy(temp, str[i]);
 				strcpy(str[i], str[j]);
@@ -25,8 +26,8 @@ void Ex2(int n, char *str[]){
 		}
 	}
 
-	for(int i = 0; i < n; i++) {
-		puts(str[i]);
+	for(k = 0; k < n; k++) {
+		printf("%s ", str[k]);
 	}
 }
 
