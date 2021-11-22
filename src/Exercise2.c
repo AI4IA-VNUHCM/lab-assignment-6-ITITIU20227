@@ -14,7 +14,21 @@ Ex:
 
 void Ex2(int n, char *str[]){
 	//Your codes here
-	
+	char temp[100];
+	int i, j, k;
+	for(i = 0; i < n; i++) {
+		for(j = i+1; j < n; j++) {
+			if(strcmp(str[i], str[j]) > 0) {
+				strcpy(temp, str[i]);
+				strcpy(str[i], str[j]);
+				strcpy(str[j], temp);
+			}
+		}
+	}
+
+	for(k = 0; k < n; k++) {
+		printf("%s ", str[k]);
+	}
 }
 
 int main(int argc, char *argv[]) {
