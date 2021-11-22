@@ -26,7 +26,7 @@ void Ex2(int n, char *str[]){
 	}
 
 	for(int i = 0; i < n; i++) {
-		printf("%s ", str[i]);
+		puts(str[i]);
 	}
 }
 
