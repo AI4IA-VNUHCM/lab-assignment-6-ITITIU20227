@@ -15,7 +15,20 @@ Ex:
 
 void Ex4(char *str){
 	//Your codes here
-	
+	char newstring[1000];
+	int i = 0, j = 0;
+
+	while(str[i] != '\0') {
+		if(!(str[i] == ' ' && str[i+1] == ' ')) {
+			newstring[j] = str[i];
+			j++;
+		}
+		i++;
+	}
+
+	newstring[j] = '\0';
+
+	printf("%s", newstring);
 }
 
 int main(int argc, char *argv[]) {
